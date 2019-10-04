@@ -1,2 +1,6 @@
 # Multi_sensor_FW
-LoRaWAN multisesnor with adge comuting algorithms
+
+LoRaWAN multi sensor with data compression algorithm.
+
+More information comming soon 
+
