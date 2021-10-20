@@ -48,7 +48,7 @@
 /*!
  * Defines the application data transmission duty cycle. 5s, value in [ms].
  */
-#define APP_TX_DUTYCYCLE                            10000 // 10000 by default
+#define APP_TX_DUTYCYCLE                            5000 // 10000 by default
 /*!
  * LoRaWAN Adaptive Data Rate
  * @note Please note that when ADR is enabled the end-device should be static
