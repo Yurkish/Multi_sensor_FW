@@ -67,11 +67,11 @@
 /*!
  * LoRaWAN default endNode class port
  */
-#define LORAWAN_DEFAULT_CLASS                       CLASS_A
+#define LORAWAN_DEFAULT_CLASS                       CLASS_C
 /*!
  * LoRaWAN default confirm state
  */
-#define LORAWAN_DEFAULT_CONFIRM_MSG_STATE           LORAWAN_UNCONFIRMED_MSG
+#define LORAWAN_DEFAULT_CONFIRM_MSG_STATE           LORAWAN_CONFIRMED_MSG
 /*!
  * User application data buffer size
  */
@@ -437,6 +437,185 @@ static void LORA_RxData( lora_AppData_t *AppData )
       }
     }
     break;
+//------------------------------------------------------------------------------
+    //user code -> yuriy testing recieving data
+    case 4:
+        /*this port is for testing*/
+        switch(AppData->Buff[0])
+        {
+           case 10:
+           {
+        	   PRINTF ("LED ON\n");
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   break;
+           }
+           case 11:
+           {
+        	   PRINTF ("LED OFF\n");
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   HAL_GPIO_TogglePin (GPIOB, GPIO_PIN_6);
+        	   HAL_Delay (100);   /* Insert delay 100 ms */
+        	   break;
+           }
+           case 3:
+           {
+        	   PRINTF ("BLINK LED\n");
+        	   HAL_Delay (1000);
+        	   PRINTF ("STOP BLINKING\n");
+        	   break;
+           }
+           default:
+           {
+        	   PRINTF ("Hello world %d\n\r", AppData->Buff[0]);
+        	   break;
+           }
+        }
+        break;
+
+//------------------------------------------------------------------------------
+
     case LORAWAN_APP_PORT:
     if( AppData->BuffSize == 1 )
     {
